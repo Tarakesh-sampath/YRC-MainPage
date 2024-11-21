@@ -1,11 +1,31 @@
+body {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
 .navbar {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
+    align-items: flex-start; /* Align items to the top */
     justify-content: space-between; /* Add space between the items */
-    gap: 20px; /* Optional: Add spacing between elements */
+    width: 100%;
+    padding: 5px 5px; /* Add some padding (adjust as needed) */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-family: "Raleway", sans-serif;
 }
-  
-h1 {
-    margin: 0; /* Remove default margin of h1 */
-    font-size: 24px; /* Adjust size as needed */
+
+.navbar img {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    max-height: 80px; /* Adjust size if needed */
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
 }

@@ -1,0 +1,26 @@
+.background-container {
+    position: relative; /* To position the overlay and content */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Adjusts the size of background images */
+    background-position: center; /* Centers the image */
+    overflow: hidden; /* Ensures no overflow */
+}
+  
+.black-overlay {
+    position: absolute; /* Ensures it covers the entire container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: 1; /* Places it above the background image */
+    
+}
+  
+.content {
+    position: relative; /* Ensures it's above the overlay */
+    z-index: 2; /* Higher than the overlay */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Optional: Center the content */
+}
