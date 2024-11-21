@@ -21,12 +21,8 @@ body {
     max-height: 80px; /* Adjust size if needed */
 }
 
-.navbar ul{
-    list-style: none;
-    padding: 0;
-}
-
 .navbar a {
     text-decoration: none;
     color: white;
 }
+
