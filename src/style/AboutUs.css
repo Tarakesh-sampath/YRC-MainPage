@@ -1,26 +1,51 @@
 .background-container {
     position: relative; /* To position the overlay and content */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack children vertically */
     width: 100%;
     height: 100vh; /* Full viewport height */
     background-size: cover; /* Adjusts the size of background images */
     background-position: center; /* Centers the image */
     overflow: hidden; /* Ensures no overflow */
 }
-  
+
 .black-overlay {
     position: absolute; /* Ensures it covers the entire container */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     z-index: 1; /* Places it above the background image */
-    
 }
-  
+
 .content {
-    position: relative; /* Ensures it's above the overlay */
-    z-index: 2; /* Higher than the overlay */
-    color: white; /* Text color for visibility */
-    text-align: center; /* Optional: Center the content */
+    position: relative; /* Keeps it above the overlay */
+    z-index: 2; /* Above the overlay */
+    color: white; /* Text color */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    flex-grow: 1; /* Take up remaining space */
+    height: 100%; /* Ensure full height */
+    padding: 20px;
+    font-family: "Raleway", sans-serif;
+}
+.Title-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.Title h1#yrc{
+    font-weight:400;
+    font-size: 400%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding:0;
 }

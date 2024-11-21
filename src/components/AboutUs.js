@@ -18,16 +18,13 @@ function AboutUs() {
 
     return (
         <>
-            <div
-                className="background-container"
-                style={{ backgroundImage: `url(${images[currentImage]})` }}
-            >
+            <div className="background-container" style={{ backgroundImage: `url(${images[currentImage]})` }}>
                 <div className="black-overlay"></div>
+                <Navbar />
                 <div className="content">
-                    <Navbar />
-                    {/* Other elements go here */}
-                    <h1>Welcome to My Web Page</h1>
-                    <p>This is an example content.</p>
+                    <div className='Title-content'>           
+                    <div className='Title'><h1 id='yrc'>YOUTH RED CROSS</h1><p>HUMANITY TOWORDS PEACE</p></div><img src={require("../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={200} />
+                    </div>
                 </div>
             </div>
             <div>

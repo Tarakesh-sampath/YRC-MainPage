@@ -8,10 +8,11 @@ body {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     justify-content: space-between; /* Add space between the items */
+    position: fixed;
     width: 100%;
     padding: 5px 5px; /* Add some padding (adjust as needed) */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
-    font-family: "Raleway", sans-serif;
+    z-index: 3; /*place about all text */
 }
 
 .navbar img {
