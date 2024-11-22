@@ -1,13 +1,29 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "./Button.js";
-import { Dropdown } from "./Dropdown.js";
+import Dropdown from "./Dropdown.js";
 import "../style/Navbar.css";
 
 function Navbar() {
   const[click,setClick] = useState(false)
+  const[dropdown,setDropdown] = useState(false)
   const handleclick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
+  const onMouseEnter = () =>{
+    if (window.innerWidth<960){
+      setDropdown(false)
+    } else{
+      setDropdown(true)
+    }
+  };
+  const onMouseLeave = () =>{
+    if (window.innerWidth<960){
+      setDropdown(false)
+    } else{
+      setDropdown(false)
+    }
+      
+  };
+
   return (
     <header>
       <div className='navbar'>
@@ -22,8 +38,12 @@ function Navbar() {
             <li className='nav-item'>
               <Link to="/" className='nav-links' onClick={closeMobileMenu}>AboutUs</Link>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
               <Link to="/" className='nav-links' onClick={closeMobileMenu}>Our Services</Link>
+              {dropdown && <Dropdown/>}
+            </li>
+            <li className='nav-item'>
+              <Link to="/" className='nav-links' onClick={closeMobileMenu}>Contact us</Link>
             </li>
           </ul>
         <img src={require("../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={80} />
