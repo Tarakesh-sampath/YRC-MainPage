@@ -1,8 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AboutUs from './components/pages/AboutUs.js';
+import Home from './components/pages/Home.js';
+
 function App() {
   return (
     <div className="App">
-      <img src={require("./images/yrc_logo.svg").default} className="App-logo" alt="logo" />
+       <Router>
+          <Routes>
+            <Route path="/" element={<AboutUs />} />
+            <Route path="/Home" element={<Home />} />
+          </Routes>
+      </Router>
     </div>
   );
 }
