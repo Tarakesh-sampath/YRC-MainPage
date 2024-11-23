@@ -1,31 +1,57 @@
-.dropdown{
-    width: 200px;
-    position:fixed;
-    top: 70px;
-    list-style: none;
-    text-align: start;
-}
-.dropdown li{
-    background: transparent;
-    cursor: pointer;
-}
-.dropdown li:hover{
-    background: rgba(0, 0, 0, 0.5);
+/* Basic styling for the dropdown menu */
+.dropdown-menu {
+  padding: 0;
+  backdrop-filter: blur(10px);  /* Keeps the blur effect */
+  background: rgba(0, 0, 0, 0.8);  /* Dark background for better visibility */
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  list-style: none;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  border-radius: 8px;  /* Adding rounded corners to match the navbar's theme */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adding shadow for better visibility */
+  z-index: 2;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 .dropdown-link{
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: white;
-    padding: 16px;
+  text-decoration: none;
+  color: white;
 }
 
-.dropdown.clicked {
-    display: none;
+/* Style for each dropdown item */
+.dropdown-menu li {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for separation */
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.dropdown-a li {
-    margin: 0; /* Optional: Adjust margins if needed */
-    padding: 5px; /* Optional: Add some padding */
+/* Hover effect for dropdown items */
+.dropdown-menu li:hover {
+  background: rgba(255, 255, 255, 0.2);  /* Light hover effect */
+  color: #ff5555; /* Red color on hover to match the navbar theme */
+}
+
+/* Hides the dropdown when clicked */
+.dropdown-menu.clicked {
+  display: none;
+}
+
+/* Mobile-specific styling */
+@media screen and (max-width: 960px) {
+  .dropdown-menu {
+      position: fixed;  /* Fixed positioning for better control on small screens */
+      top: 70px;  /* Adjust top for mobile */
+      width: 100%;  /* Full-width dropdown on small screens */
+      border-radius: 0;  /* Remove rounded corners */
+      box-shadow: none;  /* Remove shadow on mobile */
+  }
+  .dropdown-menu li {
+      text-align: left; /* Align text to left for better mobile readability */
+      padding: 16px; /* Increased padding for easy tapping */
+      border-bottom: none; /* Remove bottom border for mobile */
+  }
 }
