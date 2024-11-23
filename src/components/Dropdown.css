@@ -1,17 +1,16 @@
 .dropdown{
     width: 200px;
     position:fixed;
-    top: 200px;
+    top: 70px;
     list-style: none;
     text-align: start;
 }
-
 .dropdown li{
     background: transparent;
     cursor: pointer;
 }
 .dropdown li:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 .dropdown-link{
     display: block;
@@ -24,7 +23,7 @@
 
 .dropdown.clicked {
     display: none;
-  }
+}
 
 .dropdown-a li {
     margin: 0; /* Optional: Adjust margins if needed */
