@@ -65,7 +65,7 @@ function Navbar() {
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
-            //onMouseLeave={onMouseLeave}
+            onMouseLeave={onMouseLeave}
           >
             <Link
               to='/services'
