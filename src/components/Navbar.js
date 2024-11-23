@@ -62,26 +62,14 @@ function Navbar() {
               AboutUs
             </Link>
           </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link
-              to='/services'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Services 
+          <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+            <Link to='/services' className='nav-links' onClick={closeMobileMenu} >
+              Services<ion-icon name="chevron-down-outline" class="down-arrow"></ion-icon> 
             </Link>
             {dropdown && <Dropdown list={OurService} />}
           </li>
           <li className='nav-item'>
-            <Link
-              to='/contact-us'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
+            <Link to='/contact-us' className='nav-links' onClick={closeMobileMenu} >
               Contact Us
             </Link>
           </li>

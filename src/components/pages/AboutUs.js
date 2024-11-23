@@ -28,8 +28,18 @@ function AboutUs() {
                     </div>
                 </div>
             </div>
-            <div>
-                hello to the remaining content
+            <div className='aboutus-content'>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <center><h1>Who Are We</h1></center>
+                
+                <center><p>The Youth Red Cross (YRC) is a voluntary humanitarian organization that empowers youth to serve society. Operating under the principles of the International Red Cross and Red Crescent <br/>
+                Movement, we aim to foster a culture of health, safety, and compassion among students.</p><br/></center>
+
             </div>
         </>
     )
