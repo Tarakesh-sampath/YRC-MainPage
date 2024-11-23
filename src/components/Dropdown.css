@@ -2,7 +2,7 @@
 .dropdown-menu {
   padding: 0;
   backdrop-filter: blur(10px);  /* Keeps the blur effect */
-  background: rgba(0, 0, 0, 0.8);  /* Dark background for better visibility */
+  background: rgba(0, 0, 0, 0.1);  /* Dark background for better visibility */
   width: 200px;
   position: absolute;
   top: 80px;
