@@ -18,7 +18,10 @@
   text-decoration: none;
   color: white;
 }
-
+.dropdown-link:hover{
+  text-decoration: none;
+  color: #ff5555;
+}
 /* Style for each dropdown item */
 .dropdown-menu li {
   background: rgba(0, 0, 0, 0.3);
@@ -26,13 +29,11 @@
   padding: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Slight border for separation */
   transition: all 0.2s ease;
-  text-decoration: none;
 }
 
 /* Hover effect for dropdown items */
 .dropdown-menu li:hover {
   background: rgba(255, 255, 255, 0.2);  /* Light hover effect */
-  color: #ff5555; /* Red color on hover to match the navbar theme */
 }
 
 /* Hides the dropdown when clicked */
