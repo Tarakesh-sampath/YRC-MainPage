@@ -8,7 +8,7 @@ function Dropdown( props ) {
   const handleclick = () => setClick(!click)
   return (
     <div className='dropdown-box'>
-      <ul onClick={handleclick} classname={click ? "dropdown-a" : "dropdown"}>
+      <ul onClick={handleclick} className={click ? "dropdown-a" : "dropdown"}>
         {props.list.map((item,index) => {
           return(
               <li key={index}>

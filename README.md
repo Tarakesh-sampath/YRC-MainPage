@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## pre run commands
     npm i 
-    npm i react-router-dom,prop-types
+    npm i react-router-dom prop-types
 ## Available Scripts
 
 In the project directory, you can run:
