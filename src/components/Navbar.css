@@ -8,7 +8,6 @@ ion-icon {
   color: white;
 }
 .down-arrow{
-  color: white;
   font-size: 20px;
   padding-left: 5px;
   position:relative;
@@ -118,7 +117,9 @@ ion-icon {
     width: 100%;
     display: table;
   }
-
+  .nav-links .down-arrow{
+    display: none;
+  }
   .nav-links:hover {
     background-color: #ff5555;
     border-radius: 0;
@@ -139,19 +140,15 @@ ion-icon {
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #1888ff;
+    background: #ff5555;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
-    color: #1888ff;
+    background: #ff5555;
+    color: white;
     transition: 250ms;
-  }
-
-  button {
-    display: none;
   }
 }

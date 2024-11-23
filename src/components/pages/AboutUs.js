@@ -19,9 +19,9 @@ function AboutUs() {
 
     return (
         <>
+            <Navbar />
             <div className="background-container" style={{ backgroundImage: `url(${images[currentImage]})` }}>
                 <div className="black-overlay"></div>
-                <Navbar />
                 <div className="content">
                     <div className='Title-content'>           
                     <div className='Title'><h1 id='yrc'>YOUTH RED CROSS</h1><p>HUMANITY TOWORDS PEACE</p></div><img src={require("../../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={200} />

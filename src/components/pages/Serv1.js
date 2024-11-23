@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../Navbar'
 
-function Home() {
+function Serv1() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className='content'>
-      
+        
       </div>
     </div>
   )
 }
 
-export default Home
+export default Serv1
