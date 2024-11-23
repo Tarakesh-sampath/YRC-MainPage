@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -16,11 +16,21 @@ function Navbar() {
         cName:"dropdown-link"
     }
   ]
+
+  const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -29,7 +39,7 @@ function Navbar() {
       setDropdown(true);
     }
   };
-
+  
   const onMouseLeave = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
@@ -38,9 +48,14 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <nav className='navbar'>
+      <nav className={`navbar ${scroll ? 'scrolled' : ''}`}>
         <img 
               src={require("../images/vec_logo_bg.svg").default}
               style={{ borderRadius: '50%', padding: "5px 5px"}} 

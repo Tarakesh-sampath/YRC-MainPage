@@ -35,6 +35,10 @@
 .dropdown-menu li:hover {
   background: rgba(255, 255, 255, 0.2);  /* Light hover effect */
 }
+.dropdown-menu li:hover .dropdown-link{
+  text-decoration: none;
+  color: #ff5555;
+}
 
 /* Hides the dropdown when clicked */
 .dropdown-menu.clicked {

@@ -79,11 +79,78 @@ ion-icon {
 .menu-icon {
   display: none;
 }
+/* For scrolled navbar */
+.navbar.scrolled {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .nav-links {
+  color: black; /* Change font color */
+}
+
+.navbar.scrolled .nav-links:hover {
+  background-color: #e0e0e0; /* Adjust hover background */
+}
+
+.navbar.scrolled .down-arrow {
+  color: black; /* Change dropdown arrow color */
+}
+
+/* For dropdown menu */
+.navbar.scrolled .dropdown-menu {
+  background-color: white;
+  color: black; /* Ensure text is visible */
+}
+
+.navbar.scrolled ion-icon {
+  color: black; /* Change icon color */
+}
+
   
 @media screen and (max-width: 960px) {
   ion-icon {
     font-size: 32px;
     color: white;
+  }
+  .navbar.scrolled {
+    background-color: white; /* Change background color on scroll */
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .navbar.scrolled .nav-links {
+    color: black; /* Change link text color */
+  }
+
+  .navbar.scrolled .nav-links:hover {
+    background-color: #e0e0e0; /* Subtle hover effect */
+    color: black; /* Ensure hover state text is still black */
+  }
+
+  .navbar.scrolled .menu-icon ion-icon {
+    color: black; /* Change the menu icon color */
+  }
+
+  .nav-menu.active {
+    backdrop-filter: blur(5px); /* Keep the blur effect */
+    background: white; /* Change menu background to white */
+    color: black; /* Ensure text is visible */
+  }
+
+  .nav-links-mobile {
+    background-color: white; /* Change mobile link background */
+    color: black; /* Change mobile link text color */
+  }
+
+  .nav-links-mobile:hover {
+    background-color: #e0e0e0; /* Add hover effect */
+    color: black;
+  }
+
+  /* Dropdown menu in scrolled state */
+  .navbar.scrolled .dropdown-menu {
+    background-color: white; /* Keep dropdown consistent */
+    color: black;
   }
   .NavbarItems {
     position: relative;
