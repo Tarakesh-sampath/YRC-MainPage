@@ -1,0 +1,90 @@
+body {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Align items to the top */
+    justify-content: space-between; /* Add space between the items */
+    position: fixed;
+    width: 100%;
+    padding: 5px 5px; /* Add some padding (adjust as needed) */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    z-index: 3; /*place about all text */
+}
+.vec-logo {
+    margin-right: auto; /* Push the logo to the left */
+}
+  
+.yrc-logo {
+    margin-left: auto; /* Push the logo to the right */
+}
+  
+.navbar-body {
+    flex-grow: 1; /* Take up remaining space between the two logos */
+    text-align:left; /* left align the contents */
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    height: 100%;
+}
+.navbar img {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    max-height: 80px; /* Adjust size if needed */
+    justify-content: center; /* Horizontally centers the items (optional) */
+    
+}
+.navbar-body a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.nav-menu{
+    list-style: none; /* Removes the default bullet points */
+    padding: 0px 10px 0px 0px; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Makes the list items appear in a single line */
+    gap: 10px; /* Optional: Adds spacing between items */
+}
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.nav-links:hover {
+    background-color: #ff5555;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+.nav-links-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+ion-icon {
+    font-size: 32px;
+    color: white;
+}
+@media screen and (max-width: 960px) {
+    .nav-items {
+        position: relative;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
