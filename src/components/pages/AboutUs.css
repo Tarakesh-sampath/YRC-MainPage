@@ -7,6 +7,7 @@
     background-size: cover; /* Adjusts the size of background images */
     background-position: center; /* Centers the image */
     overflow: hidden; /* Ensures no overflow */
+    transition: background-image 5s ease-in-out;
 }
 
 .black-overlay {

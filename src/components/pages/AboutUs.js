@@ -12,7 +12,7 @@ function AboutUs() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
-        }, 5000); // Change every 5 seconds
+        }, 8000); // Change every 8 seconds
 
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []); // Empty dependency array
