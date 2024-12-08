@@ -4,19 +4,7 @@ import PropTypes from 'prop-types';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
-function Navbar(props) {
-  const OurService = [
-    {
-        title:"action - 1",
-        path:"/service-Serv1",
-        cName:"dropdown-link"
-    },
-    {
-        title:"action - 2",
-        path:"/",
-        cName:"dropdown-link"
-    }
-  ]
+function Navbar({ menuItems }) {
 
   const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
@@ -68,27 +56,26 @@ function Navbar(props) {
           <ion-icon Name={click ? "close-outline": "menu-sharp"}/>
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/Home' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to="/" className='nav-links' onClick={closeMobileMenu}>
-              AboutUs
-            </Link>
-          </li>
-          <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-            <Link to='/service' className='nav-links' onClick={closeMobileMenu} >
-              Services<ion-icon name="chevron-down-outline" class="down-arrow"></ion-icon> 
-            </Link>
-            {dropdown && <Dropdown list={OurService} />}
-          </li>
-          <li className='nav-item'>
-            <Link to='/Home' className='nav-links' onClick={closeMobileMenu} >
-              Contact Us
-            </Link>
-          </li>
+          {menuItems.map((item, index) => (
+            <li
+              key={index}
+              className="nav-item"
+              onMouseEnter={() => onMouseEnter(item)}
+              onMouseLeave={onMouseLeave}
+            >
+              <Link
+                to={item.path}
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                {item.title}
+                {item.drop && (
+                  <><ion-icon name="chevron-down-outline" class="down-arrow"></ion-icon> </>
+                )}
+              </Link>
+              {dropdown && item.drop && <Dropdown list={item.drop} />}
+            </li>
+          ))}
         </ul>
         <img 
               src={require("../images/yrc_logo.svg").default}
@@ -100,12 +87,19 @@ function Navbar(props) {
     </>
   );
 }
-Dropdown.propTypes = {
-  list: PropTypes.arrayOf(
+Navbar.propTypes = {
+  menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       path: PropTypes.string.isRequired,
-      cName: PropTypes.string.isRequired,
+      cName: PropTypes.string,
+      drop: PropTypes.arrayOf(
+        PropTypes.shape({
+          title: PropTypes.string.isRequired,
+          path: PropTypes.string.isRequired,
+          cName: PropTypes.string,
+        })
+      ),
     })
   ).isRequired,
 };
