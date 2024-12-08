@@ -17,9 +17,48 @@ function AboutUs() {
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []); // Empty dependency array
 
+    // menue items
+    const menuItems = [
+        {
+          title: "Home",
+          path: "/home",
+          cName: "nav-link",
+          drop: null,
+        },
+        {
+          title: "AboutUs",
+          path: "/aboutus",
+          cName: "nav-link",
+          drop: null,
+        },
+        {
+          title: "Service",
+          path: "/service",
+          cName: "nav-link",
+          drop: [
+            {
+              title: "Action - 1",
+              path: "/service-Serv1",
+              cName: "dropdown-link",
+            },
+            {
+              title: "Action - 2",
+              path: "/service-Serv2",
+              cName: "dropdown-link",
+            },
+          ],
+        },
+        {
+          title: "Contact Us",
+          path: "/contactus",
+          cName: "nav-link",
+          drop: null,
+        },
+      ];
+      
     return (
         <>
-            <Navbar />
+            <Navbar menuItems={menuItems}/>
             <div className="background-container" style={{ backgroundImage: `url(${images[currentImage]})` }}>
                 <div className="black-overlay"></div>
                 <div className="content">
