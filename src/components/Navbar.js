@@ -8,7 +8,7 @@ function Navbar({ menuItems }) {
 
   const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -21,19 +21,15 @@ function Navbar({ menuItems }) {
     }
   };
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
+  const onMouseEnter = (index) => {
+    if (window.innerWidth >= 960) {
+      setActiveDropdown(index);
     }
   };
   
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
+    if (window.innerWidth >= 960) {
+      setActiveDropdown(null);
     }
   };
 
@@ -60,7 +56,7 @@ function Navbar({ menuItems }) {
             <li
               key={index}
               className="nav-item"
-              onMouseEnter={() => onMouseEnter(item)}
+              onMouseEnter={() => onMouseEnter(index)}
               onMouseLeave={onMouseLeave}
             >
               <Link
@@ -73,7 +69,7 @@ function Navbar({ menuItems }) {
                   <><ion-icon name="chevron-down-outline" class="down-arrow"></ion-icon> </>
                 )}
               </Link>
-              {dropdown && item.drop && <Dropdown list={item.drop} />}
+              { activeDropdown === index && item.drop && <Dropdown list={item.drop} />}
             </li>
           ))}
         </ul>
