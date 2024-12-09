@@ -4,7 +4,7 @@ import Navbar from '../Navbar'
 function Serv1() {
   return (
     <div>
-      <Navbar />
+      <Navbar menuItems={[]}/>
       <div className='content'>
         
       </div>
