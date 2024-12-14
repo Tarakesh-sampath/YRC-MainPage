@@ -1,0 +1,44 @@
+/* Container for the separator */
+.yrc-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px; /* Add spacing between elements */
+  }
+  
+  /* Horizontal lines */
+  .yrc-line {
+    height: 2px;
+    background-color: black;
+  }
+  
+  /* Center circle with cross */
+  .yrc-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  /* Horizontal part of the red cross */
+  .yrc-cross-horizontal {
+    position: absolute;
+    width: 60%;
+    height: 10%;
+    background-color: red;
+  }
+  
+  /* Vertical part of the red cross */
+  .yrc-cross-vertical {
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    background-color: red;
+  }
+  

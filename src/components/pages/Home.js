@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar.js';
+import YRCSeparator from "../YRCSeparator";
+import "../../App.css";
 import "./Home.css";
 
 function Home() {
@@ -75,10 +77,11 @@ function Home() {
                 <br/>
                 <br/>
                 <center><h1>Who Are We</h1></center>
-                
-                <center><p>The Youth Red Cross (YRC) is a voluntary humanitarian organization that empowers youth to serve society. Operating under the principles of the International Red Cross and Red Crescent <br/>
-                Movement, we aim to foster a culture of health, safety, and compassion among students.</p><br/></center>
-
+                <YRCSeparator lineLength="100px"/>
+                <center><p>The Youth Red Cross (YRC) is a voluntary humanitarian organization that empowers young minds to serve society with compassion and dedication. Aligned with the principles of the International Red Cross and Red Crescent Movement,<br/>
+                           YRC aims to nurture health, safety, and a culture of service among students. Our organization believes in fostering the values of humanity, impartiality, neutrality, independence, voluntary service, unity, and universality to <br/>
+                           create a positive impact on communities. YRC members actively participate in social welfare initiatives, spreading awareness about health and hygiene, organizing blood donation camps, and supporting disaster relief efforts.<br/>
+                           Together, we strive to make the world a better place, one act of kindness at a time.</p><br/></center>
             </div>
         </>
     )
