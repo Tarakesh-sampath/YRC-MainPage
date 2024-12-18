@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../Navbar.js';
-import YRCSeparator from "../YRCSeparator";
-import "../../App.css";
+import Navbar from '../../Navbar/Navbar.js';
+import YRCSeparator from "../../Elements/YRCSeparator";
 import "./Home.css";
 
 function Home() {
@@ -9,7 +8,7 @@ function Home() {
     const [currentImage, setCurrentImage] = useState(0);
 
     // Images in the public folder
-    const images = ["/images/1.jpg", "/images/2.jpg"];
+    const images = ["/images/home/1.jpg", "/images/home/2.jpg"];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -65,7 +64,7 @@ function Home() {
                 <div className="black-overlay"></div>
                 <div className="content">
                     <div className='Title-content'>           
-                    <div className='Title'><h1 id='yrc'>YOUTH RED CROSS</h1><p>HUMANITY TOWORDS PEACE</p></div><img src={require("../../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={200} />
+                    <div className='Title'><h1 id='yrc'>YOUTH RED CROSS</h1><p>HUMANITY TOWORDS PEACE</p></div><img src={require("../../../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={200} />
                     </div>
                 </div>
             </div>

@@ -42,7 +42,7 @@ function Navbar({ menuItems }) {
     <>
       <nav className={`navbar ${scroll ? 'scrolled' : ''}`}>
         <img 
-              src={require("../images/vec_logo_bg.svg").default}
+              src={require("../../images/vec_logo_bg.svg").default}
               style={{ borderRadius: '50%', padding: "5px 5px"}} 
               className="vec-logo" 
               alt="logo" 
@@ -74,7 +74,7 @@ function Navbar({ menuItems }) {
           ))}
         </ul>
         <img 
-              src={require("../images/yrc_logo.svg").default}
+              src={require("../../images/yrc_logo.svg").default}
               className="yrc-logo" 
               alt="logo" 
               height={80} 
