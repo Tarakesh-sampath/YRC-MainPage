@@ -10,7 +10,7 @@
   /* Horizontal lines */
   .yrc-line {
     height: 2px;
-    background-color: black;
+    background-color: var(--black);
   }
   
   /* Center circle with cross */
@@ -20,8 +20,8 @@
     justify-content: center;
     width: 30px;
     height: 30px;
-    background-color: white;
-    border: 2px solid black;
+    background-color: var(--white);;
+    border: 2px solid var(--black);
     border-radius: 50%;
     position: relative;
   }
@@ -31,7 +31,7 @@
     position: absolute;
     width: 60%;
     height: 10%;
-    background-color: red;
+    background-color: var(--red);
   }
   
   /* Vertical part of the red cross */
@@ -39,6 +39,6 @@
     position: absolute;
     width: 10%;
     height: 60%;
-    background-color: red;
+    background-color: var(--red);;
   }
   

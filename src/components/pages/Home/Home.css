@@ -23,7 +23,7 @@
 .content {
     position: relative; /* Keeps it above the overlay */
     z-index: 2; /* Above the overlay */
-    color: white; /* Text color */
+    color: var(--white); /* Text color */
     text-align: center; /* Center text horizontally */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack content vertically */
@@ -32,7 +32,6 @@
     flex-grow: 1; /* Take up remaining space */
     height: 100%; /* Ensure full height */
     padding: 20px;
-    font-family: "Raleway", sans-serif;
 }
 .Title-content {
     display: flex;
@@ -49,7 +48,4 @@
     align-items: center;
     margin: 0;
     padding:0;
-}
-.aboutus-content{
-    font-family: "Raleway", sans-serif;
 }

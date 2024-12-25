@@ -16,11 +16,11 @@
 }
 .dropdown-link{
   text-decoration: none;
-  color: white;
+  color: var(--white);;
 }
 .dropdown-link:hover{
   text-decoration: none;
-  color: #ff5555;
+  color: var(--red-highlight);;
 }
 /* Style for each dropdown item */
 .dropdown-menu li {
@@ -37,7 +37,7 @@
 }
 .dropdown-menu li:hover .dropdown-link{
   text-decoration: none;
-  color: #ff5555;
+  color: var(--red-highlight);;
 }
 
 /* Hides the dropdown when clicked */

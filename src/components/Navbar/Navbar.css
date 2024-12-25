@@ -57,13 +57,13 @@ ion-icon {
 }
   
 .nav-links {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
 .nav-links:hover {
-  background-color: #ff5555;
+  background-color: var(--red-highlight);;
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
@@ -81,76 +81,76 @@ ion-icon {
 }
 /* For scrolled navbar */
 .navbar.scrolled {
-  background-color: white;
+  background-color: var(--white);
   transition: background-color 0.3s ease-in-out;
 }
 
 .navbar.scrolled .nav-links {
-  color: black; /* Change font color */
+  color: var(--black); /* Change font color */
 }
 
 .navbar.scrolled .nav-links:hover {
-  background-color: #e0e0e0; /* Adjust hover background */
+  background-color: var(--white); /* Adjust hover background */
 }
 
 .navbar.scrolled .down-arrow {
-  color: black; /* Change dropdown arrow color */
+  color: var(--black); /* Change dropdown arrow color */
 }
 
 /* For dropdown menu */
 .navbar.scrolled .dropdown-menu {
-  background-color: white;
-  color: black; /* Ensure text is visible */
+  background-color: var(--white);
+  color: var(--black); /* Ensure text is visible */
 }
 
 .navbar.scrolled ion-icon {
-  color: black; /* Change icon color */
+  color: var(--black); /* Change icon color */
 }
 
   
 @media screen and (max-width: 960px) {
   ion-icon {
     font-size: 32px;
-    color: white;
+    color: var(--white);
   }
   .navbar.scrolled {
-    background-color: white; /* Change background color on scroll */
+    background-color: var(--white); /* Change background color on scroll */
     transition: background-color 0.3s ease-in-out;
   }
 
   .navbar.scrolled .nav-links {
-    color: black; /* Change link text color */
+    color: var(--black); /* Change link text color */
   }
 
   .navbar.scrolled .nav-links:hover {
-    background-color: #e0e0e0; /* Subtle hover effect */
-    color: black; /* Ensure hover state text is still black */
+    background-color:var(--white); /* Subtle hover effect */
+    color: var(--black); /* Ensure hover state text is still black */
   }
 
   .navbar.scrolled .menu-icon ion-icon {
-    color: black; /* Change the menu icon color */
+    color: var(--black); /* Change the menu icon color */
   }
 
   .nav-menu.active {
     backdrop-filter: blur(5px); /* Keep the blur effect */
-    background: white; /* Change menu background to white */
-    color: black; /* Ensure text is visible */
+    background: var(--white); /* Change menu background to white */
+    color: var(--black); /* Ensure text is visible */
   }
 
   .nav-links-mobile {
-    background-color: white; /* Change mobile link background */
-    color: black; /* Change mobile link text color */
+    background-color: var(--white); /* Change mobile link background */
+    color: var(--black); /* Change mobile link text color */
   }
 
   .nav-links-mobile:hover {
-    background-color: #e0e0e0; /* Add hover effect */
-    color: black;
+    background-color: var(--white); /* Add hover effect */
+    color: var(--black);
   }
 
   /* Dropdown menu in scrolled state */
   .navbar.scrolled .dropdown-menu {
-    background-color: white; /* Keep dropdown consistent */
-    color: black;
+    background-color: var(--white);/* Keep dropdown consistent */
+    color: var(--black);
   }
   .NavbarItems {
     position: relative;
@@ -188,7 +188,7 @@ ion-icon {
     display: none;
   }
   .nav-links:hover {
-    background-color: #ff4d4d;
+    background-color: var(--red-highlight);
     border-radius: 0;
   }  
   .menu-icon {
@@ -207,15 +207,15 @@ ion-icon {
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #ff5555;
+    background: var(--red-highlight);
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     font-size: 1.5rem;
   }
 
   .nav-links-mobile:hover {
     background: #ff5555;
-    color: white;
+    color: var(--white);
     transition: 250ms;
   }
 }
