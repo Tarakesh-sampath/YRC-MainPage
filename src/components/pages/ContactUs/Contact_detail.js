@@ -68,7 +68,7 @@ function Contact_detail() {
               </a>
               <a
                 id= "icon-4"
-                href="https://youtube.com/yrc_vec"
+                href="https://www.youtube.com/@YouthRedCrossVEC/featured"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Follow us on YouTube"
