@@ -13,10 +13,11 @@ section {
   width: 100%;
   padding-top: 80px;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-flow: row dense;
+  background-color: var(--pale-pink);
 }
 
 h2 {
@@ -196,7 +197,7 @@ h2 {
 }
 
 .faq-section {
-  max-height: 300px; /* Set a maximum height to enable scrolling */
+  max-height: 460px; /* Set a maximum height to enable scrolling */
   overflow-y: auto; /* Add vertical scrolling */
   background-color: var(--white); /* Light background for better visibility */
   padding: 15px; /* Padding around the content */

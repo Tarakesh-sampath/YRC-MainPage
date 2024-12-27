@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React,{ useState, useEffect } from "react";
 import "./ContactUs.css";
 import Navbar_white from '../../Navbar/Navbar_white.js';
 import FAQ from "./FAQ.js";
 import Location from "./Location.js";
 import Contact_detail from "./Contact_detail.js";
 import C_form from "./C_form.js";
+
 const ContactPage = () => {
+
   const menuItems = [
     {
       title: "Home",
@@ -44,7 +46,7 @@ const ContactPage = () => {
     },
   ];
   return (
-    <>
+    <div className="bg">
       <Navbar_white menuItems={menuItems} text={"YOUTH RED CROSS"}/>
       <div className="layout">
         <C_form/>
@@ -54,7 +56,7 @@ const ContactPage = () => {
         </div>
         <FAQ/>
       </div>
-    </>
+    </div>
   );
 };
 
