@@ -106,9 +106,24 @@ ion-icon {
 .navbar.scrolled ion-icon {
   color: var(--black); /* Change icon color */
 }
+.navbar-title {
+  font-size: 1.5rem; /* Adjust as needed */
+  font-weight: bold;
+  color: var(--white); /* Match your navbar text color */
+  margin-left: 10px; /* Spacing between logo and title */
+  visibility: hidden;
+}
 
+.navbar.scrolled .navbar-title {
+  visibility: visible;
+  color: var(--red); /* Optional: Change color on scroll for better visibility */
+}
   
 @media screen and (max-width: 960px) {
+  .navbar-title {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+    margin-left: 5px;
+  }
   ion-icon {
     font-size: 32px;
     color: var(--white);

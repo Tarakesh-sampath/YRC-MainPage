@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
-function Navbar({ menuItems }) {
+function Navbar({ menuItems ,text}) {
 
   const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
@@ -44,6 +44,7 @@ function Navbar({ menuItems }) {
         <div className='menu-icon' onClick={handleClick}>
           <ion-icon Name={click ? "close-outline": "menu-sharp"}/>
         </div>
+        <span className="navbar-title">{text}</span>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           {menuItems.map((item, index) => (
             <li
@@ -86,6 +87,7 @@ Navbar.propTypes = {
       ),
     })
   ).isRequired,
+  text :PropTypes.string
 };
 
 export default Navbar;

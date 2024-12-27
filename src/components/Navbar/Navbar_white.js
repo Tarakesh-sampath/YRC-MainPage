@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
-function Navbar_white({ menuItems }) {
+function Navbar({ menuItems ,text}) {
 
   const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -40,17 +39,12 @@ function Navbar_white({ menuItems }) {
 
   return (
     <>
-      <nav className={`navbar ${scroll ? '' : 'scrolled'}`}>
-        <img 
-              src={require("../../images/vec_logo_bg.svg").default}
-              style={{ borderRadius: '50%', padding: "5px 5px"}} 
-              className="vec-logo" 
-              alt="logo" 
-              height={65} 
-        />
+      <nav className={`navbar scrolled`}>
+        <img src={require("../../images/vec_logo_bg.svg").default} style={{ borderRadius: '50%', padding: "5px 5px"}}  className="vec-logo" alt="logo"  height={65} />
         <div className='menu-icon' onClick={handleClick}>
           <ion-icon Name={click ? "close-outline": "menu-sharp"}/>
         </div>
+        <span className="navbar-title">{text}</span>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           {menuItems.map((item, index) => (
             <li
@@ -73,17 +67,12 @@ function Navbar_white({ menuItems }) {
             </li>
           ))}
         </ul>
-        <img 
-              src={require("../../images/yrc_logo.svg").default}
-              className="yrc-logo" 
-              alt="logo" 
-              height={80} 
-            />
+        <img src={require("../../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={80} />
       </nav>
     </>
   );
 }
-Navbar_white.propTypes = {
+Navbar.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -98,6 +87,7 @@ Navbar_white.propTypes = {
       ),
     })
   ).isRequired,
+  text :PropTypes.string
 };
 
-export default Navbar_white;
+export default Navbar;

@@ -45,7 +45,7 @@ const ContactPage = () => {
   ];
   return (
     <>
-      <Navbar_white menuItems={menuItems}/>
+      <Navbar_white menuItems={menuItems} text={"YOUTH RED CROSS"}/>
       <div className="layout">
         <C_form/>
         <Location/>

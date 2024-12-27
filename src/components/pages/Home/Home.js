@@ -59,7 +59,7 @@ function Home() {
       
     return (
         <>
-            <Navbar menuItems={menuItems}/>
+            <Navbar menuItems={menuItems} text={"YOUTH RED CROSS"}/>
             <div className="background-container" style={{ backgroundImage: `url(${images[currentImage]})` }}>
                 <div className="black-overlay"></div>
                 <div className="content">
