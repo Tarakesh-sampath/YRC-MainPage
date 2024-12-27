@@ -46,10 +46,7 @@ function Contact_detail() {
                 rel="noopener noreferrer"
                 title="Follow us on Instagram"
               >
-                <i
-                  className="fa-brands fa-square-instagram"
-                  style={{ color: "#E4405F", fontSize: "24px", cursor: "pointer" }}
-                ></i>
+                <ion-icon name="logo-instagram" style={{ color:"#D72323", fontSize: "36px", cursor: "pointer" }}></ion-icon>
               </a>
               <a
                 id= "icon-2"
@@ -58,10 +55,7 @@ function Contact_detail() {
                 rel="noopener noreferrer"
                 title="Follow us on Facebook"
               >
-                <i
-                  className="fa-brands fa-square-facebook"
-                  style={{ color: "#4267B2", fontSize: "24px", cursor: "pointer" }}
-                ></i>
+                <ion-icon name="logo-facebook" style={{ color: "#4267B2", fontSize: "36px", cursor: "pointer" }}></ion-icon>
               </a>
               <a
                 id= "icon-3"
@@ -70,10 +64,7 @@ function Contact_detail() {
                 rel="noopener noreferrer"
                 title="Follow us on Twitter"
               >
-                <i
-                  className="fa-brands fa-square-twitter"
-                  style={{ color: "#1DA1F2", fontSize: "24px", cursor: "pointer" }}
-                ></i>
+                <ion-icon name="logo-twitter" style={{ color: "#1DA1F2", fontSize: "36px", cursor: "pointer" }} ></ion-icon>
               </a>
               <a
                 id= "icon-4"
@@ -82,10 +73,7 @@ function Contact_detail() {
                 rel="noopener noreferrer"
                 title="Follow us on YouTube"
               >
-                <i
-                  className="fa-brands fa-square-youtube"
-                  style={{ color: "#ff5656", fontSize: "24px", cursor: "pointer" }}
-                ></i>
+                <ion-icon name="logo-youtube" style={{ color: "#ff5656", fontSize: "36px", cursor: "pointer" }} ></ion-icon>
               </a>
             </div>
           </section>

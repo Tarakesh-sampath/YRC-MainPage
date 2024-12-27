@@ -9,7 +9,6 @@ function Navbar({ menuItems }) {
   const [scroll, setScroll] = useState(false);
   const [click, setClick] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -41,13 +40,7 @@ function Navbar({ menuItems }) {
   return (
     <>
       <nav className={`navbar ${scroll ? 'scrolled' : ''}`}>
-        <img 
-              src={require("../../images/vec_logo_bg.svg").default}
-              style={{ borderRadius: '50%', padding: "5px 5px"}} 
-              className="vec-logo" 
-              alt="logo" 
-              height={65} 
-        />
+        <img src={require("../../images/vec_logo_bg.svg").default} style={{ borderRadius: '50%', padding: "5px 5px"}}  className="vec-logo" alt="logo"  height={65} />
         <div className='menu-icon' onClick={handleClick}>
           <ion-icon Name={click ? "close-outline": "menu-sharp"}/>
         </div>
@@ -73,12 +66,7 @@ function Navbar({ menuItems }) {
             </li>
           ))}
         </ul>
-        <img 
-              src={require("../../images/yrc_logo.svg").default}
-              className="yrc-logo" 
-              alt="logo" 
-              height={80} 
-            />
+        <img src={require("../../images/yrc_logo.svg").default} className="yrc-logo" alt="logo" height={80} />
       </nav>
     </>
   );

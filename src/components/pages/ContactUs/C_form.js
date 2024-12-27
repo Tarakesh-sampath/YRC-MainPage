@@ -10,7 +10,6 @@ function C_form() {
       });
     
       const [formSubmitted, setFormSubmitted] = useState(false);
-      
       const [errors, setErrors] = useState({});
       const [animationClass, setAnimationClass] = useState("");
     
