@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 ion-icon {
-  font-size: 32px;
+  font-size: 20px;
   color: white;
 }
 .down-arrow{
@@ -107,7 +107,7 @@ ion-icon {
   color: var(--black); /* Change icon color */
 }
 .navbar-title {
-  font-size: 1.5rem; /* Adjust as needed */
+  font-size: 1rem; /* Adjust as needed */
   font-weight: bold;
   color: var(--white); /* Match your navbar text color */
   margin-left: 10px; /* Spacing between logo and title */
@@ -121,11 +121,11 @@ ion-icon {
   
 @media screen and (max-width: 960px) {
   .navbar-title {
-    font-size: 1.2rem; /* Adjust for smaller screens */
+    font-size: 1rem; /* Adjust for smaller screens */
     margin-left: 5px;
   }
   ion-icon {
-    font-size: 32px;
+    font-size: 28px;
     color: var(--white);
   }
   .navbar.scrolled {
@@ -134,7 +134,7 @@ ion-icon {
   }
 
   .navbar.scrolled .nav-links {
-    color: var(--black); /* Change link text color */
+    color: var(--white); /* Change link text color */
   }
 
   .navbar.scrolled .nav-links:hover {
@@ -191,6 +191,7 @@ ion-icon {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    padding: 0;
   }
 
   .nav-links {

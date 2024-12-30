@@ -5,6 +5,8 @@
     --red-highlight: #FF5656;
     --pale-pink :#ffe5e5;
     --font: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 body {

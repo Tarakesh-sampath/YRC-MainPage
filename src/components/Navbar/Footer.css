@@ -1,0 +1,43 @@
+.footer-container {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 10px;
+    font-family: var(--font);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    color: var(--red-highlight);
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin: 10px 0;
+}
+
+.social-icon {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    color: var(--red-highlight);
+}

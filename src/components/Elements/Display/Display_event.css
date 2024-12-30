@@ -1,0 +1,14 @@
+.scrollable-array {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .card-container {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
